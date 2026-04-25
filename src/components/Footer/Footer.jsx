@@ -60,8 +60,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="mt-20 pt-8 border-t border-white/5 text-center text-xs tracking-widest">
-        © 2026 METORA ARTISANS. ALL RIGHTS RESERVED.
+      <div className="mt-20 pt-8 border-t border-white/5 text-center text-lg tracking-widest text-white">
+        © 2026 METORA DECOR. ALL RIGHTS RESERVED.
       </div>
     </footer>
   );

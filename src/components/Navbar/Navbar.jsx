@@ -1,4 +1,5 @@
 "use client";
+// import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -10,6 +11,9 @@ export default function Navbar() {
         <div className="text-2xl font-black uppercase tracking-widest text-[#424242] font-[family-name:var(--font-mont)]">
           METORA
         </div>
+        {/* <div>
+          <Image src="/logos/LogoTransparernt.png" alt="Metora Decor Logo" width={100} height={20}/>
+        </div> */}
 
         <div className="hidden md:flex items-center space-x-12">
           <a
