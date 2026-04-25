@@ -5,6 +5,17 @@
   --foreground: #1b1c1a;
 }
 
+/* AuthButton */
+
+.authBtn {
+  @apply font-[family-name:var(--font-mont)] font-bold uppercase text-sm 
+         text-white hover:text-[#424242] transition-all duration-300 
+         px-4 py-2 rounded bg-[#f9a825] hover:brightness-110;
+}
+.authBtn.authBtn-outline {
+  @apply bg-transparent hover:bg-[#f9a825] border border-[#f9a825] text-[#424242] hover:text-white;
+}
+
 @layer components {
   .metora-glow:hover {
     box-shadow: 0 0 20px rgba(249, 168, 37, 0.3);

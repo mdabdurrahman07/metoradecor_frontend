@@ -54,7 +54,7 @@ export default function Footer() {
               className="bg-[#1A1A1A] border-none rounded px-4 py-2 text-sm w-full"
               placeholder="Email Address"
             />
-            <button className="bg-[#f9a825] text-[#1A1A1A] px-4 py-2 rounded font-bold text-xs">
+            <button className="text-white bg-[#f9a825] px-4 py-2 rounded font-bold text-xs hover:brightness-110">
               JOIN
             </button>
           </div>

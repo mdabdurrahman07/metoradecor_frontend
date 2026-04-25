@@ -47,7 +47,7 @@ export default function ContactForm() {
               className="w-full bg-[#fbf9f5] border-[#d7c3ae] rounded-md p-4 text-sm h-32 focus:ring-1 focus:ring-[#835400] outline-none"
               placeholder="Message..."
             ></textarea>
-            <button className="w-full bg-[#f9a825] text-[#2a1800] font-[family-name:var(--font-mont)] font-bold uppercase tracking-widest text-xs py-5 rounded-md hover:brightness-110 transition-all">
+            <button className="w-full bg-[#f9a825] text-[#424242] font-[family-name:var(--font-mont)] font-bold uppercase tracking-widest text-xs py-5 rounded-md hover:brightness-110 transition-all">
               Send Inquiry
             </button>
           </form>

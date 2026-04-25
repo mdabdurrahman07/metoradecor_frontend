@@ -1,9 +1,11 @@
 "use client";
 // import Image from "next/image";
 import { useState } from "react";
+import AuthButton from "../Buttons/AuthButton/AuthButton";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+      const user = true
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 backdrop-blur-xl transition-colors duration-500 border-b border-[#000000]/5">
@@ -37,9 +39,14 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center space-x-6">
+          
+          {/* cart button */}
           <button className="text-[#424242] hover:text-[#f9a825] transition-all scale-95 duration-200">
             <span className="material-symbols-outlined">shopping_cart</span>
           </button>
+          
+          
+          {/* mobile X icon */}
           <button
             className="md:hidden text-[#424242]"
             onClick={() => setIsOpen(!isOpen)}
@@ -48,6 +55,8 @@ export default function Navbar() {
               {isOpen ? "close" : "menu"}
             </span>
           </button>
+          {/* login button */}
+          <AuthButton user={user}/>
         </div>
       </div>
 
