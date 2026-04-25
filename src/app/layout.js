@@ -1,11 +1,8 @@
-import {
-  Montserrat,
-  Plus_Jakarta_Sans,
-  La_Belle_Aurore,
-  Epilogue,
-} from "next/font/google";
-import { Toaster } from "react-hot-toast";
-import "./globals.css";
+import { Montserrat, Plus_Jakarta_Sans, La_Belle_Aurore, Epilogue } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
+import './globals.css';
+import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 const jakarta = Plus_Jakarta_Sans({
@@ -32,10 +29,15 @@ export default function RootLayout({ children }) {
         className={`${jakarta.variable} ${montserrat.variable} ${aurore.variable} ${epilogue.variable} bg-[#fbf9f5] text-[#1b1c1a]`}
       >
         <Toaster position="bottom-right" />
-        <header></header>
-        <main>{children}</main>
-
-        <footer></footer>
+        <header>
+          <Navbar/>
+        </header>
+        <main>
+          {children}
+        </main>
+        <div>
+         <Footer/>
+        </div>
       </body>
     </html>
   );
