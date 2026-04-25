@@ -1,10 +1,12 @@
-import Hero from '@/components/Hero/Hero';
-import React from 'react';
+import Hero from "@/components/Sections/Hero/Hero";
+import ProductSection from "@/components/Sections/ProductSection/ProductSection";
+import React from "react";
 
 const Home = () => {
   return (
-    <div className='min-h-screen'>
-      <Hero/>
+    <div className="min-h-screen">
+      <Hero />
+      <ProductSection />
     </div>
   );
 };
