@@ -5,7 +5,7 @@ export default function Philosophy() {
     <section className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-24 items-center">
       <div className="order-2 md:order-1 relative">
         <Image
-          src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5db?q=80&w=1000"
+          src="/logos/Logo.jpg"
           alt="Interior Detail"
           width={600}
           height={400}
