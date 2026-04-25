@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1"
         />
       </head>
-      <body
+      <body suppressHydrationWarning
         className={`${jakarta.variable} ${montserrat.variable} ${aurore.variable} ${epilogue.variable} bg-[#fbf9f5] text-[#1b1c1a]`}
       >
         <Toaster position="bottom-right" />
