@@ -4,9 +4,7 @@ import toast from "react-hot-toast";
 export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast.success("Inquiry sent! We will contact you soon.", {
-      style: { background: "#f5f3ef", color: "#b8860b" },
-    });
+    toast.success("Inquiry sent! We will contact you soon.");
     e.target.reset();
   };
 
