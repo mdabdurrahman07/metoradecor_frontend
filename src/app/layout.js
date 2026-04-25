@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning
         className={`${jakarta.variable} ${montserrat.variable} ${aurore.variable} ${epilogue.variable} bg-[#fbf9f5] text-[#1b1c1a]`}
       >
-        <Toaster position="bottom-right" />
+        <Toaster position="top-center" />
         <header>
           <Navbar/>
         </header>
