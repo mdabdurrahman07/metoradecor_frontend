@@ -5,7 +5,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     toast.success("Inquiry sent! We will contact you soon.", {
-      style: { background: "#f5f3ef", color: "#f9a825" },
+      style: { background: "#f5f3ef", color: "#b8860b" },
     });
     e.target.reset();
   };
