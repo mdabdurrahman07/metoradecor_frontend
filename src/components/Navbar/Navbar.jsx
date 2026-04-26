@@ -1,5 +1,5 @@
 "use client";
-// import Image from "next/image";
+import Image from "next/image";
 import { useState } from "react";
 import AuthButton from "../Buttons/AuthButton/AuthButton";
 import NavLink from "../Buttons/NavLink/NavLink";
@@ -20,12 +20,12 @@ export default function Navbar() {
   return (
     <section className="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 backdrop-blur-xl transition-colors duration-500 border-b border-[#000000]/5">
       <div className="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
-        <div className="text-2xl font-black uppercase tracking-widest text-[#424242] font-[family-name:var(--font-mont)]">
+        {/* <div className="text-2xl font-black uppercase tracking-widest text-[#424242] font-[family-name:var(--font-mont)]">
           METORA
-        </div>
-        {/* <div>
-          <Image src="/logos/LogoTransparernt.png" alt="Metora Decor Logo" width={100} height={20}/>
         </div> */}
+        <div>
+          <Image src="/logos/MetoraDecorLogoMid.png" alt="Metora Decor Logo" width={100} height={20}/>
+        </div>
 
         <div className="hidden md:flex items-center space-x-12">{nav}</div>
 
