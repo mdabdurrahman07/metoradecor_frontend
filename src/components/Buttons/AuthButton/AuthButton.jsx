@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 const AuthButton = ({user}) => {
@@ -5,7 +6,7 @@ const AuthButton = ({user}) => {
   return (
     <>
     {user ? <button className="authBtn">
-        Login
+        <Link href={"/login"}>Login</Link>
       </button> 
       : <button className="authBtn authBtn-outline">
         Logout
