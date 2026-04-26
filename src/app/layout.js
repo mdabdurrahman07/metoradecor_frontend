@@ -32,7 +32,7 @@ export const metadata = {
 
   description: "Metora Decor is home decoration solution for your amazing home",
 
-  applicationName: "HeroKidz",
+  applicationName: "Metora Decor",
 };
 
 export default function RootLayout({ children }) {
