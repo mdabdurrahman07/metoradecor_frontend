@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#424242] w-full pt-24 pb-12">
+    <div className="bg-[#424242] w-full pt-24 pb-12">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-24 max-w-screen-2xl mx-auto text-[#e4e2de]/80">
         <div className="space-y-6">
           <div className="font-display font-extrabold uppercase text-[#f9a825] text-xl">
@@ -63,6 +63,6 @@ export default function Footer() {
       <div className="mt-20 pt-8 border-t border-white/5 text-center text-lg tracking-widest text-white">
         © 2026 METORA DECOR. ALL RIGHTS RESERVED.
       </div>
-    </footer>
+    </div>
   );
 }
