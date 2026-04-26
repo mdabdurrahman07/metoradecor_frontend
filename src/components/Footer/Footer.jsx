@@ -4,11 +4,10 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-24 max-w-screen-2xl mx-auto text-[#e4e2de]/80">
         <div className="space-y-6">
           <div className="font-display font-extrabold uppercase text-[#f9a825] text-xl">
-            METORA
+            METORA Decor
           </div>
           <p className="text-sm">
-            Luxury decor for the conscious curator. Elevating environments
-            through artisanal excellence.
+            Decor That Defines You
           </p>
         </div>
         <div className="space-y-6">

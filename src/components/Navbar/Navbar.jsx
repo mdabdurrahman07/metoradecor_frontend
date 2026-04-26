@@ -1,9 +1,10 @@
 "use client";
-import Image from "next/image";
+
 import { useState } from "react";
 import AuthButton from "../Buttons/AuthButton/AuthButton";
 import NavLink from "../Buttons/NavLink/NavLink";
 import { Menu, ShoppingCart, X } from "lucide-react";
+import Logo from "../Logo/Logo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,12 +26,7 @@ export default function Navbar() {
           METORA
         </div> */}
         <div>
-          <Image
-            src="/logos/MetoraDecorLogoMid.png"
-            alt="Metora Decor Logo"
-            width={100}
-            height={20}
-          />
+          <Logo/>
         </div>
 
         <div className="hidden md:flex items-center space-x-12">{nav}</div>
