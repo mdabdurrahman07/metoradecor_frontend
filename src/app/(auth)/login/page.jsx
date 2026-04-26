@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const UserLogin = () => {
   return (
-    <div className="grid grid-cols-5">
-      <div className="border-2 border-green-500 p-10">{/* Image */}</div>
-      <div className="grid-cols-2.5 border-2 border-red-500 p-10"></div>
-      {/* Login Form */}
+    <div className='min-h-screen w-full bg-[#f3f4f6] flex items-center justify-center p-4 md:p-8'>
+      <div className='flex w-full max-w-300'>
+
+      </div>
     </div>
   );
 };

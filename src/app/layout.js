@@ -6,7 +6,7 @@ import {
 } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
-import Head from "./head";
+
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 const jakarta = Plus_Jakarta_Sans({
@@ -38,9 +38,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <Head />
-      </head>
       <body
         suppressHydrationWarning
         className={`${jakarta.variable} ${montserrat.variable} ${aurore.variable} ${epilogue.variable} bg-[#fbf9f5] text-[#1b1c1a]`}

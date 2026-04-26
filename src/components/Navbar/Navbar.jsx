@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import AuthButton from "../Buttons/AuthButton/AuthButton";
 import NavLink from "../Buttons/NavLink/NavLink";
+import { Menu, ShoppingCart, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,10 +11,10 @@ export default function Navbar() {
 
   const nav = (
     <>
-      <NavLink href="/" navName="Home"/>
-      <NavLink href="/products" navName="Products"/>
-      <NavLink href="/about_us" navName="About Us"/>
-      <NavLink href="/contact" navName="Contact"/>
+      <NavLink href="/" navName="Home" />
+      <NavLink href="/products" navName="Products" />
+      <NavLink href="/about_us" navName="About Us" />
+      <NavLink href="/contact" navName="Contact" />
     </>
   );
 
@@ -24,7 +25,12 @@ export default function Navbar() {
           METORA
         </div> */}
         <div>
-          <Image src="/logos/MetoraDecorLogoMid.png" alt="Metora Decor Logo" width={100} height={20}/>
+          <Image
+            src="/logos/MetoraDecorLogoMid.png"
+            alt="Metora Decor Logo"
+            width={100}
+            height={20}
+          />
         </div>
 
         <div className="hidden md:flex items-center space-x-12">{nav}</div>
@@ -32,7 +38,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-6">
           {/* cart button */}
           <button className="text-[#424242] hover:text-[#f9a825] transition-all scale-95 duration-200">
-            <span className="material-symbols-outlined">shopping_cart</span>
+            <ShoppingCart />
           </button>
 
           {/* mobile X icon */}
@@ -40,9 +46,7 @@ export default function Navbar() {
             className="md:hidden text-[#424242]"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <span className="material-symbols-outlined">
-              {isOpen ? "close" : "menu"}
-            </span>
+            <span>{isOpen ? <X /> : <Menu />}</span>
           </button>
           {/* login button */}
           <AuthButton user={user} />
