@@ -1,8 +1,12 @@
-import { Montserrat, Plus_Jakarta_Sans, La_Belle_Aurore, Epilogue } from 'next/font/google';
-import { Toaster } from 'react-hot-toast';
-import './globals.css';
-import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
+import {
+  Montserrat,
+  Plus_Jakarta_Sans,
+  La_Belle_Aurore,
+  Epilogue,
+} from "next/font/google";
+import { Toaster } from "react-hot-toast";
+import "./globals.css";
+import Head from "./head";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 const jakarta = Plus_Jakarta_Sans({
@@ -16,28 +20,33 @@ const aurore = La_Belle_Aurore({
 });
 const epilogue = Epilogue({ subsets: ["latin"], variable: "--font-epilogue" });
 
+// expecting metaData
+
+export const metadata = {
+  metadataBase: new URL("https://metoradecor.com"),
+
+  title: {
+    default: "Metora Decor| Decor That Defines You",
+    template: "%s | Metora Decor",
+  },
+
+  description: "Metora Decor is home decoration solution for your amazing home",
+
+  applicationName: "HeroKidz",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1"
-        />
+        <Head />
       </head>
-      <body suppressHydrationWarning
+      <body
+        suppressHydrationWarning
         className={`${jakarta.variable} ${montserrat.variable} ${aurore.variable} ${epilogue.variable} bg-[#fbf9f5] text-[#1b1c1a]`}
       >
         <Toaster position="top-center" />
-        <header>
-          <Navbar/>
-        </header>
-        <main className='min-h-[calc(100vh-397px)]'>
-          {children}
-        </main>
-        <footer>
-         <Footer/>
-        </footer>
+        {children}
       </body>
     </html>
   );
