@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 const Logo = () => {
-    return (
-        <Image
-            src="/logos/MetoraDecorLogoMid.png"
-            alt="Metora Decor Logo"
-            width={100}
-            height={20}
-          />
-    );
+  return (
+    <Link href={"/"}>
+      <Image
+        src="/logos/MetoraDecorLogoMid.png"
+        alt="Metora Decor Logo"
+        width={100}
+        height={20}
+      />
+    </Link>
+  );
 };
 
 export default Logo;
