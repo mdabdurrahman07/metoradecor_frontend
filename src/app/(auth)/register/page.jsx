@@ -32,9 +32,6 @@ const UserRegisterPage = () => {
             <h2 className="text-4xl font-[family-name:var(--font-mont)] mb-1">
               Create an Account
             </h2>
-            {/* <p className="text-gray-500 text-sm font-[family-name:var(--font-mont)]">
-              Enter your email and password to access your account
-            </p> */}
           </div>
           {/* form */}
           <form
@@ -54,21 +51,6 @@ const UserRegisterPage = () => {
                   errors.email ? "input-error" : ""
                 }`}
                 {...register("name", { required: "Name is required" })}
-              />
-            </div>
-            <div className="form-control w-full">
-              <label className="label">
-                <span className="label-text font-semibold font-[family-name:var(--font-mont)]">
-                  Email
-                </span>
-              </label>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className={`input input-bordered w-full bg-[#F5F7FB] focus:bg-white transition-all outline-none${
-                  errors.email ? "input-error" : ""
-                }`}
-                {...register("email", { required: "Email is required" })}
               />
             </div>
             <div className="form-control w-full">
@@ -112,10 +94,9 @@ const UserRegisterPage = () => {
                 </button>
               </div>
             </div>
-
             <div className="space-y-2 pt-4">
               <button className="w-full bg-[#f9a825] text-[#424242] hover:text-white font-[family-name:var(--font-mont)] font-bold uppercase tracking-widest text-md py-5 rounded-md hover:brightness-110 transition-all duration-200">
-                Login
+                Register
               </button>
 
               {/* Social Media Button */}
@@ -123,12 +104,12 @@ const UserRegisterPage = () => {
           </form>
           {/* Footer */}
           <p className="text-center text-md text-gray-500 mt-8 font-[family-name:var(--font-mont)]">
-            Don&apos;t have an account?{" "}
+            Already have an account?{" "}
             <Link
-              href="/register"
+              href="/login"
               className=" font-bold hover:underline text-[#f9a825]"
             >
-              Register
+              Login
             </Link>
           </p>
         </div>
@@ -136,7 +117,7 @@ const UserRegisterPage = () => {
         <div className="hidden lg:flex relative w-1/2 p-16 flex-col justify-between overflow-hidden bg-black text-white">
           {/* BG Image Wrapper */}
           <Image
-            src="/images/chic-empty-room-authentic-interior-design.jpg"
+            src="/images/empty-white-room-interior-design-with-blank-frames.jpg"
             alt="Metora Decor Login Page"
             fill
             className="object-cover opacity-80"
@@ -146,18 +127,19 @@ const UserRegisterPage = () => {
           <div className="relative z-10">
             <div className="flex items-center gap-4">
               <span className="text-xs font-bold tracking-[0.2rem] uppercase opacity-70">
-                A Wise Quote
+                Metora Decor
               </span>
               <div className="h-px w-12 bg-white opacity-30 "></div>
             </div>
           </div>
           <div className="relative z-10 max-w-md">
             <h1 className="text-7xl font-[family-name:var(--font-aurore)] leading-tight mb-6">
-              Get Everything You Want
+              Decor That Defines You
             </h1>
             <p className="text-lg opacity-80 font-[family-name:var(--font-mont)] leading-relaxed">
-              You can get everything you want if you work hard, trust the
-              process, and stick to the plan.
+              Metora Decor specializes in custom wall art, offering unique
+              pieces that reflect your personality through high-quality,
+              personalized home accents.
             </p>
           </div>
         </div>
