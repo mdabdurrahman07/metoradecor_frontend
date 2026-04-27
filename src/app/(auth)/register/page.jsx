@@ -22,26 +22,40 @@ const UserRegisterPage = () => {
       {/* login middle div */}
       <div className="flex w-full max-w-300 min-h-200 bg-white rounded-[40px] overflow-hidden shadow-2xl">
         {/* left  Side main form*/}
-
         <div className="w-full lg:w-1/2 p-8 flex flex-col justify-between bg-white">
           {/* logo */}
-          <div className="flex items-center justify-center mb-8">
+          <div className="flex items-center justify-center mb-2">
             <LogoMd />
           </div>
           {/* header */}
-          <div className="text-center mb-10">
-            <h2 className="text-4xl font-[family-name:var(--font-mont)] mb-2">
-              Welcome Back
+          <div className="text-center mb-5">
+            <h2 className="text-4xl font-[family-name:var(--font-mont)] mb-1">
+              Create an Account
             </h2>
-            <p className="text-gray-500 text-sm font-[family-name:var(--font-mont)]">
+            {/* <p className="text-gray-500 text-sm font-[family-name:var(--font-mont)]">
               Enter your email and password to access your account
-            </p>
+            </p> */}
           </div>
           {/* form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-6 max-w-sm mx-auto w-full"
+            className="space-y-2 max-w-sm mx-auto w-full"
           >
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text font-semibold font-[family-name:var(--font-mont)]">
+                  Name
+                </span>
+              </label>
+              <input
+                type="name"
+                placeholder="Enter your full name"
+                className={`input input-bordered w-full bg-[#F5F7FB] focus:bg-white transition-all outline-none${
+                  errors.email ? "input-error" : ""
+                }`}
+                {...register("name", { required: "Name is required" })}
+              />
+            </div>
             <div className="form-control w-full">
               <label className="label">
                 <span className="label-text font-semibold font-[family-name:var(--font-mont)]">
@@ -57,7 +71,21 @@ const UserRegisterPage = () => {
                 {...register("email", { required: "Email is required" })}
               />
             </div>
-
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text font-semibold font-[family-name:var(--font-mont)]">
+                  Email
+                </span>
+              </label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className={`input input-bordered w-full bg-[#F5F7FB] focus:bg-white transition-all outline-none${
+                  errors.email ? "input-error" : ""
+                }`}
+                {...register("email", { required: "Email is required" })}
+              />
+            </div>
             <div className="form-control w-full">
               <label className="label">
                 <span className="label-text font-semibold font-[family-name:var(--font-mont)]">
@@ -85,20 +113,7 @@ const UserRegisterPage = () => {
               </div>
             </div>
 
-            {/* <div className="flex items-center justify-between text-sm">
-              <label className="label cursor-pointer flex gap-2">
-                <input
-                  type="checkbox"
-                  className="checkbox checkbox-sm rounded"
-                />
-                <span className="label-text">Remember me</span>
-              </label>
-              <a href="#" className="link link-hover font-medium">
-                Forgot Password
-              </a>
-            </div> */}
-
-            <div className="space-y-4 pt-4">
+            <div className="space-y-2 pt-4">
               <button className="w-full bg-[#f9a825] text-[#424242] hover:text-white font-[family-name:var(--font-mont)] font-bold uppercase tracking-widest text-md py-5 rounded-md hover:brightness-110 transition-all duration-200">
                 Login
               </button>
@@ -118,7 +133,6 @@ const UserRegisterPage = () => {
           </p>
         </div>
         {/* Right side Image visual and quote */}
-
         <div className="hidden lg:flex relative w-1/2 p-16 flex-col justify-between overflow-hidden bg-black text-white">
           {/* BG Image Wrapper */}
           <Image
